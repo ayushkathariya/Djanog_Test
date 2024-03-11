@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <style>
+      /* Custom Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      .navbar {
+        background-color: #222;
+      }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        color: #fff;
+      }
+      .navbar-brand:hover,
+      .navbar-nav .nav-link:hover {
+        color: #fff;
+      }
+      .jumbotron {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+      }
+      .jumbotron h1 {
+        font-size: 3rem;
+      }
+      .jumbotron p {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Beautiful Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Signup</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Our Beautiful Home</h1>
+      <p class="lead">Experience Comfort, Style, and Elegance</p>
+      <hr class="my-4" />
+      {% if name %}
+      <p>Hello {{name}}</p>
+      {% endif %}
+      <a class="btn btn-primary btn-lg" href="#" role="button">Explore Now</a>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Modern Design</h2>
+          <p>
+            Our homes feature modern and elegant designs that will leave you in
+            awe.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Luxurious Amenities</h2>
+          <p>
+            Enjoy luxurious amenities including swimming pools, gyms, and more.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2>Prime Locations</h2>
+          <p>
+            Located in prime areas with easy access to shopping, dining, and
+            entertainment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
